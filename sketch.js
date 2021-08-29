@@ -32,7 +32,7 @@ function preload(){
     balls=loadImage("ball.png")
     four=loadImage("four.jpg")
     five=loadImage("five.jpg")
-    space=loadSound("space.mp3")
+    space2=loadSound("space2.mp3")
 
 }
 
@@ -55,9 +55,7 @@ meteors.addImage(meteor);
 meteors.scale=0.2
 
 
- planets = createSprite(400,500);
-planets.addImage(planet);
-planets.scale=0.2
+ 
 
 button=createSprite(700,500,100,50)
 button.addImage(buttons);
@@ -104,7 +102,6 @@ stroke ("white")
 text("WELCOME TO MISSION JUPITER",20,35)
 text("Score:"+score,900,35)
 if(mousePressedOver(button)){
-planets.visible=false;
 meteors.visible=false;
 astronaunt.visible=false;
 astronaunt2.visible=false;
@@ -202,14 +199,22 @@ case 5:
 
 if(score>=3){
     gameState="END"
-    
+    button3.visible=false
+    button4.visible=false
+    button2.visible=false
+
     }
 
 }
 if(gameState==="END"){
     text("WELCOME TO JUPITER!",400,200)
+    bg=loadImage("bg.jpg")
+    planets = createSprite(400,500);
+    planets.addImage(planet);
+    planets.scale=0.5
+
 }
-space.play();
+space2.play(false);
 
 drawSprites()
 }
