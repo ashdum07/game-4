@@ -209,7 +209,7 @@ if(score>=3){
 if(gameState==="END"){
     text("WELCOME TO JUPITER!",400,200)
     bg=loadImage("bg.jpg")
-    planets = createSprite(400,200);
+    planets = createSprite(600,450);
     planets.addImage(planet);
     planets.scale=0.5
 
