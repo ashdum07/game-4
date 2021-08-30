@@ -32,7 +32,7 @@ function preload(){
     balls=loadImage("ball.png")
     four=loadImage("four.jpg")
     five=loadImage("five.jpg")
-    space2=loadSound("space2.mp3")
+    
 
 }
 
@@ -209,13 +209,12 @@ if(score>=3){
 if(gameState==="END"){
     text("WELCOME TO JUPITER!",400,200)
     bg=loadImage("bg.jpg")
-    planets = createSprite(400,500);
+    planets = createSprite(400,200);
     planets.addImage(planet);
     planets.scale=0.5
 
 }
-space2.play(false);
+
 
 drawSprites()
 }
-
